@@ -103,3 +103,98 @@ nav a:hover { color: var(--gold); }
 
 /* FOOTER */
 footer { background: var(--bg-dark); text-align: center; padding: 40px 20px; border-top: 1px solid #222; }
+/* =========================================
+   📱 ADAPTATION MOBILE (RESPONSIVE IPHONE/ANDROID)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Header & Menu de navigation */
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    nav a {
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    /* Section Principale (Hero) */
+    .hero {
+        height: auto;
+        min-height: 70vh;
+        padding: 40px 15px;
+    }
+    .hero h1 {
+        font-size: 2.5rem; /* Texte plus petit pour mobile */
+        margin-bottom: 15px;
+    }
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    /* Espacements des sections */
+    .section-dark, .section-bordeaux {
+        padding: 60px 0; /* Moins de vide sur mobile */
+    }
+    .section-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    /* Carte de Réservation (Nails) */
+    .booking-card {
+        padding: 30px 20px;
+        margin: 20px 15px 0;
+    }
+    .booking-card h3 {
+        font-size: 1.5rem;
+    }
+    .price-tag span {
+        font-size: 1.3rem;
+    }
+
+    /* Section À Propos */
+    .about-text p {
+        padding: 0 15px;
+        font-size: 0.95rem;
+    }
+
+    /* Grille des Formations */
+    .grid-formations {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    .formation-card {
+        padding: 25px 20px;
+    }
+    .full-price {
+        font-size: 1.6rem;
+    }
+
+    /* Boutons */
+    .btn-gold {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+
+    /* CGV et Mentions Légales */
+    .legal-container {
+        padding: 0 15px;
+    }
+    summary {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
