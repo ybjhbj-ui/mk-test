@@ -1,0 +1,105 @@
+/* --- VARIABLES LUXE --- */
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-bordeaux: #2a0810;
+    --bordeaux-light: #4a0e1c;
+    --gold: #D4AF37;
+    --gold-light: #f3d573;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.text-center { text-align: center; }
+
+/* HEADER */
+header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 40px; background: rgba(10, 10, 10, 0.9);
+    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222;
+}
+.logo { font-family: var(--font-heading); font-size: 1.5rem; color: var(--gold); font-weight: 600; letter-spacing: 2px; }
+nav a { color: var(--text-main); text-decoration: none; margin-left: 25px; font-size: 0.9rem; text-transform: uppercase; transition: color 0.3s; }
+nav a:hover { color: var(--gold); }
+
+/* HERO SECTION */
+.hero {
+    height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center;
+    background: radial-gradient(circle at center, var(--bordeaux-light) 0%, var(--bg-dark) 70%);
+}
+.hero h1 { font-family: var(--font-heading); font-size: 4rem; line-height: 1.2; margin-bottom: 20px; }
+.hero h1 span { color: var(--gold); font-style: italic; }
+.hero p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px; }
+
+/* BOUTONS */
+.btn-gold {
+    background: var(--gold); color: #000; padding: 15px 40px; text-decoration: none;
+    font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-radius: 3px;
+    transition: all 0.3s; display: inline-block;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
+
+.btn-gold-small {
+    background: var(--gold); color: #000; padding: 10px 20px; text-decoration: none;
+    font-weight: 600; font-size: 0.9rem; border-radius: 3px; display: block; text-align: center; transition: 0.3s;
+}
+.btn-gold-small:hover { background: var(--gold-light); }
+
+.btn-outline {
+    border: 1px solid var(--gold); color: var(--gold); padding: 12px 30px; text-decoration: none;
+    font-weight: 600; display: inline-block; transition: 0.3s;
+}
+.btn-outline:hover { background: var(--gold); color: #000; }
+
+/* SECTIONS */
+.section-dark { background-color: var(--bg-dark); padding: 100px 0; }
+.section-bordeaux { background-color: var(--bg-bordeaux); padding: 100px 0; border-top: 1px solid #3a111a; border-bottom: 1px solid #3a111a; }
+
+.section-title { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 10px; }
+.section-title span { color: var(--gold); }
+.subtitle { color: var(--text-muted); font-size: 1.1rem; }
+
+/* CARTE RÉSERVATION ONGLES */
+.booking-card {
+    background: #111; border: 1px solid #333; padding: 50px; border-radius: 10px;
+    max-width: 600px; margin: 40px auto 0;
+}
+.booking-card h3 { font-family: var(--font-heading); font-size: 1.8rem; color: var(--gold); margin-bottom: 20px; }
+.booking-card p { color: var(--text-muted); margin-bottom: 25px; }
+.price-tag { font-size: 1.2rem; font-weight: 600; margin-bottom: 30px; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 15px 0; }
+.price-tag span { color: var(--gold); font-size: 1.5rem; }
+
+/* GRILLE FORMATIONS */
+.grid-formations { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+.formation-card {
+    background: rgba(10, 10, 10, 0.6); border: 1px solid #3a111a; padding: 30px;
+    border-radius: 5px; display: flex; flex-direction: column; justify-content: space-between;
+    transition: transform 0.3s, border-color 0.3s;
+}
+.formation-card:hover { transform: translateY(-5px); border-color: var(--gold); background: rgba(10, 10, 10, 0.9); }
+
+.special-card { border: 1px solid var(--gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.1); }
+
+.card-tag { font-size: 0.75rem; color: var(--bg-dark); background: var(--gold); display: inline-block; padding: 3px 10px; font-weight: 600; margin-bottom: 15px; border-radius: 2px; text-transform: uppercase; }
+.formation-card h3 { font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 10px; color: #fff; }
+.duration { font-size: 0.85rem; color: var(--gold); margin-bottom: 15px; font-weight: 600; }
+.desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px; flex-grow: 1; }
+
+.pricing { border-top: 1px solid #333; padding-top: 15px; margin-bottom: 20px; }
+.full-price { display: block; font-size: 2rem; font-family: var(--font-heading); color: #fff; margin-bottom: 5px; }
+.acompte { display: block; font-size: 0.85rem; color: var(--text-muted); }
+
+/* FOOTER */
+footer { background: var(--bg-dark); text-align: center; padding: 40px 20px; border-top: 1px solid #222; }
